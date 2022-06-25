@@ -1,4 +1,9 @@
-html, body{
+html, body, noscript, #root{
   margin: 0;
   font-family: 'Inter', sans-serif;
+  height: 100%;
+}
+
+.text-align-center{
+  text-align: center;
 }
