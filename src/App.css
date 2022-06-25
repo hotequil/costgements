@@ -7,3 +7,34 @@
 .app .app__main{
     flex-grow: 1;
 }
+
+.app .app__header{
+    display: flex;
+    align-items: center;
+    padding: var(--double-space);
+    background-color: var(--yellow);
+    column-gap: var(--space);
+}
+
+.app .app__logo{
+    width: 100%;
+    max-width: 35px;
+}
+
+.app .app__title{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.app .app__footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space) var(--double-space);
+    text-decoration: underline;
+    font-size: 1rem;
+    background-color: var(--black);
+    color: var(--white);
+}

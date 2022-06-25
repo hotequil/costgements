@@ -1,7 +1,18 @@
+:root{
+  --space: 5px;
+  --double-space: calc(var(--space) * 2);
+  --yellow: #f1f10d;
+  --black: #1a1a1a;
+  --white: #fefefe;
+}
+
 html, body, noscript, #root{
   margin: 0;
   font-family: 'Inter', sans-serif;
   height: 100%;
+  font-size: 16px;
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .text-align-center{
