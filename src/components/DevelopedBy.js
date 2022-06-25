@@ -1,6 +1,8 @@
+import styles from "./DevelopedBy.module.css"
+
 function DevelopedBy({ name }){
   return (
-    <span>Developed by {name}</span>
+    <span className={styles.smallFont}>Developed by {name}</span>
   )
 }
 
