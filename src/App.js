@@ -1,5 +1,6 @@
 import logo from './logo.png';
 import './App.css';
+import HelloGuys from "./components/HelloGuys";
 
 function App() {
   const name = "hotequil"
@@ -11,7 +12,7 @@ function App() {
         <p className="app__title">costgements</p>
       </header>
       <main className="app__main">
-        <h1 className="text-align-center">Hello guys</h1>
+        <HelloGuys />
       </main>
       <footer className="app__footer text-align-center">Developed by {name}</footer>
     </div>
