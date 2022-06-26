@@ -1,6 +1,7 @@
 :root{
   --space: 5px;
   --double-space: calc(var(--space) * 2);
+  --fourth-space: calc(var(--double-space) * 2);
   --yellow: #f1f10d;
   --black: #1a1a1a;
   --white: #fefefe;
@@ -17,4 +18,8 @@ html, body, noscript, #root{
 
 .text-align-center{
   text-align: center;
+}
+
+.no-margin{
+  margin: 0;
 }

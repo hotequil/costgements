@@ -6,6 +6,11 @@
 
 .app .app__main{
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: var(--fourth-space);
+    padding: var(--fourth-space);
 }
 
 .app .app__header{

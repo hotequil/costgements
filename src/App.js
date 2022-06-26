@@ -2,6 +2,7 @@ import logo from './logo.png';
 import './App.css';
 import HelloGuys from "./components/HelloGuys";
 import DevelopedBy from "./components/DevelopedBy";
+import Partner from "./components/Partner";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       </header>
       <main className="app__main">
         <HelloGuys />
+        <Partner />
       </main>
       <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
     </div>
