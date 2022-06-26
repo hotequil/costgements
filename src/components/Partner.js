@@ -12,9 +12,9 @@ function Partner({ title, description, since }){
 }
 
 Partner.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  since: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  since: PropTypes.number.isRequired,
 }
 
 export default Partner
