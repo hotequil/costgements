@@ -3,6 +3,7 @@
   --double-space: calc(var(--space) * 2);
   --fourth-space: calc(var(--double-space) * 2);
   --yellow: #f1f10d;
+  --yellow-opacity-44: rgba(241, 241, 13, 0.44);
   --black: #1a1a1a;
   --white: #fefefe;
   --grey: #bebebe;

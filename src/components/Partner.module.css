@@ -26,3 +26,14 @@
     font-size: .875rem;
     color: var(--dark-grey);
 }
+
+.alert{
+    border-radius: var(--space);
+    border: var(--border) var(--yellow);
+    padding: var(--space);
+    background-color: var(--yellow-opacity-44);
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--black);
+    font-weight: 600;
+}
