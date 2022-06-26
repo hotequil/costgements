@@ -17,4 +17,10 @@ Partner.propTypes = {
   since: PropTypes.number.isRequired,
 }
 
+Partner.defaultProps = {
+  title: "set title",
+  description: "set description",
+  since: "set since",
+}
+
 export default Partner
