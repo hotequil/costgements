@@ -28,3 +28,17 @@ html, body, noscript, #root{
 .no-margin{
   margin: 0;
 }
+
+.link{
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 1rem;
+  border: none;
+  text-align: left;
+  width: fit-content;
+  display: inline-block;
+  color: var(--black);
+  cursor: pointer;
+}

@@ -10,7 +10,7 @@
     max-width: 326px;
 }
 
-.title, .description, .since{
+.title, .description, .since, .descriptionExpanded{
     margin: 0;
 }
 
@@ -19,7 +19,16 @@
 }
 
 .description{
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.description, .descriptionExpanded{
     font-size: 1rem;
+    word-break: break-word;
+    display: -webkit-box;
 }
 
 .since{
