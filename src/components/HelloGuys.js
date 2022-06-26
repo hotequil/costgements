@@ -1,6 +1,6 @@
 function HelloGuys(){
   return (
-    <h1 className="text-align-center">Hello guys</h1>
+    <h1 className="text-align-center">Hello guys, welcome to the costgements!</h1>
   )
 }
 
