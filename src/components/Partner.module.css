@@ -1,0 +1,28 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: var(--double-space);
+    border-radius: var(--space);
+    border: var(--border-grey);
+    row-gap: var(--space);
+    width: 100%;
+    max-width: 226px;
+}
+
+.title, .description, .since{
+    margin: 0;
+}
+
+.title{
+    font-size: 1.25rem;
+}
+
+.description{
+    font-size: 1rem;
+}
+
+.since{
+    font-size: .875rem;
+    color: var(--dark-grey);
+}

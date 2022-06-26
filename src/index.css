@@ -5,6 +5,10 @@
   --yellow: #f1f10d;
   --black: #1a1a1a;
   --white: #fefefe;
+  --grey: #bebebe;
+  --dark-grey: #727272;
+  --border: 1px solid;
+  --border-grey: var(--border) var(--grey);
 }
 
 html, body, noscript, #root{
