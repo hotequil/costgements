@@ -13,7 +13,9 @@ function App() {
       </header>
       <main className="app__main">
         <HelloGuys />
-        <Partner />
+        <Partner title="Google"
+                 description={"Google LLC is an American multinational technology company that focuses on artificial intelligence, search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics."}
+                 since={1998} />
       </main>
       <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
     </div>
