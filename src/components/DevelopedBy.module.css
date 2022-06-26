@@ -1,3 +1,7 @@
-.smallFont{
+.smallFont, .copy{
     font-size: .9rem;
+}
+
+.copy{
+    font-weight: 600;
 }

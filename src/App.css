@@ -33,7 +33,6 @@
     align-items: center;
     justify-content: center;
     padding: var(--space) var(--double-space);
-    text-decoration: underline;
     font-size: 1rem;
     background-color: var(--black);
     color: var(--white);
