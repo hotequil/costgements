@@ -1,6 +1,7 @@
 import styles from "./Partner.module.css"
 import PropTypes from "prop-types";
 import { useState } from "react";
+import LinkButton from "./actions/LinkButton";
 
 function Partner({ title, description, since }){
   const alertTitle = () => alert(`Title: ${title}`);
@@ -10,7 +11,7 @@ function Partner({ title, description, since }){
     <article className={styles.card}>
       <h2 className={styles.title}>{ title }</h2>
       <p className={expanded ? styles.descriptionExpanded : styles.description}>{description}</p>
-      <button onClick={setExpanded.bind(this, !expanded)} className="link">{expanded ? 'See less' : 'See more'}</button>
+      <LinkButton click={setExpanded.bind(this, !expanded)} text={expanded ? 'See less' : 'See more'} />
       <p className={styles.since}>Since { since }</p>
       <button className={styles.alert} onClick={alertTitle}>Show alert</button>
     </article>
