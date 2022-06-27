@@ -7,6 +7,7 @@
   --yellow-opacity-44: rgba(var(--yellow-rgb), .44);
   --yellow-opacity-12: rgba(var(--yellow-rgb), .12);
   --black: #1a1a1a;
+  --black-opacity-24: rgba(26, 26, 26, 0.24);
   --white: #fefefe;
   --grey: #bebebe;
   --dark-grey: #727272;
@@ -26,6 +27,22 @@ html, body, noscript, #root{
 
 *{
   box-sizing: border-box;
+}
+
+::-moz-selection{
+  background: var(--yellow-opacity-44);
+  color: var(--black);
+}
+
+::selection{
+  background: var(--yellow-opacity-44);
+  color: var(--black);
+}
+
+ul, ol{
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .text-align-center{
@@ -48,4 +65,20 @@ html, body, noscript, #root{
   display: inline-block;
   color: var(--black);
   cursor: pointer;
+}
+
+.font-home-title{
+  font-size: 8rem;
+  color: var(--black);
+  font-weight: 600;
+  max-width: var(--max-width-page);
+  margin: 0 auto;
+  text-shadow: 2px 4px 2px var(--black-opacity-24);
+}
+
+.center-absolute{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
