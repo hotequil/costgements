@@ -5,6 +5,24 @@ import DevelopedBy from "./components/DevelopedBy";
 import Partner from "./components/Partner";
 
 function App() {
+  const partners = [
+    {
+      name: "Google",
+      description: "Google LLC is an American multinational technology company that focuses on artificial intelligence, search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics.",
+      since: 1998,
+    },
+    {
+      name: "Amazon",
+      description: "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It has been referred to as \"one of the most influential economic and cultural forces in the world\", and is one of the world's most valuable brands.",
+      since: 1994,
+    },
+    {
+      name: "Microsoft Corporation",
+      description: "Microsoft Corporation, commonly known as Microsoft, is an American multinational technology corporation which produces computer software, consumer electronics, personal computers, and related services headquarted at the Microsoft Redmond campus located in Redmond, Washington, United States.",
+      since: 1975,
+    },
+  ];
+
   return (
     <div className="app">
       <header className="app__header">
@@ -13,9 +31,9 @@ function App() {
       </header>
       <main className="app__main">
         <HelloGuys />
-        <Partner title="Google"
-                 description={"Google LLC is an American multinational technology company that focuses on artificial intelligence, search engine technology, online advertising, cloud computing, computer software, quantum computing, e-commerce, and consumer electronics."}
-                 since={1998} />
+        <div className="app__partners">
+          { partners.map(({ name, description, since }) => <Partner title={name} description={description} since={since} />) }
+        </div>
       </main>
       <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
     </div>

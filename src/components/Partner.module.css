@@ -8,6 +8,7 @@
     row-gap: var(--space);
     width: 100%;
     max-width: 326px;
+    height: fit-content;
 }
 
 .title, .description, .since, .descriptionExpanded{
