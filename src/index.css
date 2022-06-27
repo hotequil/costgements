@@ -24,6 +24,10 @@ html, body, noscript, #root{
   background-color: var(--white);
 }
 
+*{
+  box-sizing: border-box;
+}
+
 .text-align-center{
   text-align: center;
 }
