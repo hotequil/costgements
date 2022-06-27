@@ -42,9 +42,3 @@
     background-color: var(--black);
     color: var(--white);
 }
-
-.app .app__partners{
-    display: flex;
-    justify-content: center;
-    column-gap: var(--fourth-space);
-}

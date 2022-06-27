@@ -3,13 +3,16 @@
   --double-space: calc(var(--space) * 2);
   --fourth-space: calc(var(--double-space) * 2);
   --yellow: #f1f10d;
-  --yellow-opacity-44: rgba(241, 241, 13, 0.44);
+  --yellow-rgb: 241, 241, 13;
+  --yellow-opacity-44: rgba(var(--yellow-rgb), .44);
+  --yellow-opacity-12: rgba(var(--yellow-rgb), .12);
   --black: #1a1a1a;
   --white: #fefefe;
   --grey: #bebebe;
   --dark-grey: #727272;
   --border: 1px solid;
   --border-grey: var(--border) var(--grey);
+  --max-width-page: 1200px;
 }
 
 html, body, noscript, #root{

@@ -2,7 +2,7 @@ import logo from './logo.png';
 import './App.css';
 import HelloGuys from "./components/HelloGuys";
 import DevelopedBy from "./components/DevelopedBy";
-import Partner from "./components/Partner";
+import PartnerList from "./components/lists/PartnerList";
 
 function App() {
   const partners = [
@@ -31,9 +31,7 @@ function App() {
       </header>
       <main className="app__main">
         <HelloGuys />
-        <div className="app__partners">
-          { partners.map(({ name, description, since }, index) => <Partner key={index} title={name} description={description} since={since} />) }
-        </div>
+        <PartnerList partners={partners} />
       </main>
       <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
     </div>
