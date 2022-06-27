@@ -32,7 +32,7 @@ function App() {
       <main className="app__main">
         <HelloGuys />
         <div className="app__partners">
-          { partners.map(({ name, description, since }) => <Partner title={name} description={description} since={since} />) }
+          { partners.map(({ name, description, since }, index) => <Partner key={index} title={name} description={description} since={since} />) }
         </div>
       </main>
       <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
