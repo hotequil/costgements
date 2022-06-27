@@ -7,7 +7,6 @@
     border: var(--border-grey);
     row-gap: var(--space);
     width: 100%;
-    max-width: 326px;
     height: fit-content;
 }
 
