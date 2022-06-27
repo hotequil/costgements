@@ -1,0 +1,11 @@
+.message{
+    border-radius: var(--space);
+    background-color: var(--yellow-opacity-12);
+    color: var(--black);
+    padding: var(--fourth-space) var(--double-space);
+    font-weight: 600;
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
