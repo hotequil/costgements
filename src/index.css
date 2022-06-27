@@ -68,17 +68,31 @@ ul, ol{
 }
 
 .font-home-title{
-  font-size: 8rem;
+  font-size: 6rem;
   color: var(--black);
   font-weight: 600;
-  max-width: var(--max-width-page);
-  margin: 0 auto;
+  max-width: 800px;
+  margin: auto;
   text-shadow: 2px 4px 2px var(--black-opacity-24);
+  display: inline-block;
+  word-break: break-word;
+  width: 100%;
 }
 
-.center-absolute{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@media(max-width: 1000px){
+  html, body, noscript, #root{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 800px){
+  .font-home-title{
+    font-size: 4rem;
+  }
+}
+
+@media(max-width: 600px){
+  .font-home-title{
+    font-size: 3rem;
+  }
 }
