@@ -4,6 +4,7 @@ import HelloGuys from "./components/HelloGuys";
 import DevelopedBy from "./components/DevelopedBy";
 import PartnerList from "./components/lists/PartnerList";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import Projects from "./pages/Projects";
 
 function App() {
   const partners = [
@@ -30,9 +31,10 @@ function App() {
         <header className="app__header">
           <img className="app__logo" src={logo} alt="costgements logo" />
           <p className="app__title">costgements</p>
-          <nav>
+          <nav className="app__navigation">
             <ul className="app__links">
               <li><Link className="app__link" to="/">Home</Link></li>
+              <li><Link className="app__link" to="/projects">Projects</Link></li>
               <li><Link className="app__link" to="/partners">Partners</Link></li>
             </ul>
           </nav>
@@ -40,7 +42,8 @@ function App() {
         <main className="app__main">
           <Routes>
             <Route path="/" exact element={<HelloGuys />} />
-            <Route path="/partners" element={<PartnerList partners={partners} />} />
+            <Route path="/projects" exact element={<Projects />} />
+            <Route path="/partners" exact element={<PartnerList partners={partners} />} />
           </Routes>
         </main>
         <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
