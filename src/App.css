@@ -32,6 +32,9 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin: 0;
+}
+
+.app .app__navigation{
     flex-grow: 1;
 }
 
@@ -49,6 +52,7 @@
 .app .app__links{
     display: flex;
     column-gap: var(--double-space);
+    justify-content: flex-end;
 }
 
 .app .app__link{
@@ -68,6 +72,6 @@
     }
 
     .app .app__title{
-        font-size: 1.25rem;
+        display: none;
     }
 }
