@@ -1,0 +1,21 @@
+.button{
+    border: none;
+    text-decoration: none;
+    background-color: var(--yellow);
+    font-weight: 600;
+    color: var(--black);
+    font-size: 1.15rem;
+    border-radius: var(--space);
+    padding: calc(var(--space) * 3) var(--fourth-space);
+    width: fit-content;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+    transition: background-color var(--ms-transition), color var(--ms-transition);
+    display: block;
+}
+
+.button:hover, .button:focus{
+    background-color: var(--black);
+    color: var(--white);
+}
