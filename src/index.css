@@ -1,7 +1,8 @@
 :root{
-  --space: 5px;
+  --space: .3125rem;
   --double-space: calc(var(--space) * 2);
   --fourth-space: calc(var(--double-space) * 2);
+  --eight-space: calc(var(--space) * 8);
   --yellow: #f1f10d;
   --yellow-rgb: 241, 241, 13;
   --yellow-opacity-44: rgba(var(--yellow-rgb), .44);
@@ -14,6 +15,7 @@
   --border: 1px solid;
   --border-grey: var(--border) var(--grey);
   --max-width-page: 1200px;
+  --ms-transition: 200ms;
 }
 
 html, body, noscript, #root{
@@ -67,16 +69,25 @@ ul, ol{
   cursor: pointer;
 }
 
-.font-home-title{
+.font-title-home{
   font-size: 6rem;
   color: var(--black);
   font-weight: 600;
-  max-width: 800px;
-  margin: auto;
+  margin: 0 auto;
   text-shadow: 2px 4px 2px var(--black-opacity-24);
   display: inline-block;
   word-break: break-word;
+}
+
+.center-content-home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 800px;
   width: 100%;
+  row-gap: var(--eight-space);
 }
 
 @media(max-width: 1000px){
@@ -86,13 +97,13 @@ ul, ol{
 }
 
 @media(max-width: 800px){
-  .font-home-title{
+  .font-title-home{
     font-size: 4rem;
   }
 }
 
 @media(max-width: 600px){
-  .font-home-title{
+  .font-title-home{
     font-size: 3rem;
   }
 }
