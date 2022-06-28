@@ -4,7 +4,7 @@ import { useState } from "react";
 import LinkButton from "./actions/LinkButton";
 import { generateMoreTextConfig, toggleMoreText } from "../helpers/more-text";
 
-function Partner({ title, description, since }){
+function Partner({ title, description, since, children }){
   const alertTitle = () => alert(`Title: ${title}`);
   const [expanded, setExpanded] = useState(false);
   const [descriptionConfig, setDescriptionConfig] = useState(generateMoreTextConfig());
@@ -13,7 +13,7 @@ function Partner({ title, description, since }){
 
   return (
     <article className={styles.card}>
-      <h2 className={styles.title}>{ title }</h2>
+      <h2 className={styles.title}>{ children } { title }</h2>
       <p id={descriptionConfig.elementId} className={expanded ? styles.descriptionExpanded : styles.description}>{description}</p>
 
       {descriptionConfig.show && <LinkButton click={setExpanded.bind(this, !expanded)} text={expanded ? 'See less' : 'See more'} />}

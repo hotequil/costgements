@@ -27,6 +27,10 @@
     column-gap: var(--space);
 }
 
+.titleBig{
+    font-size: 1.65rem;
+}
+
 @media(max-width: 1000px){
     .list{
         grid-template-columns: repeat(2, 1fr);
