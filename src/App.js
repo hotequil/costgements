@@ -4,7 +4,7 @@ import HelloGuys from "./components/HelloGuys";
 import DevelopedBy from "./components/DevelopedBy";
 import PartnerList from "./components/lists/PartnerList";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import Projects from "./pages/Projects";
+import Projects from "./pages/projects/Projects";
 
 function App() {
   const partners = [

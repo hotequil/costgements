@@ -13,6 +13,7 @@
     margin: 0;
     transition: background-color var(--ms-transition), color var(--ms-transition);
     display: block;
+    height: fit-content;
 }
 
 .button:hover, .button:focus{
