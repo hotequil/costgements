@@ -2,11 +2,12 @@ import styles from "./PartnerList.module.css"
 import PropTypes from "prop-types";
 import Partner from "../Partner";
 import NotFound from "../messages/NotFound";
+import { FaHandshake } from "react-icons/fa";
 
 function PartnerList({ partners }) {
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>Partners</h2>
+      <h2 className={styles.title}>Partners <FaHandshake aria-hidden={true} /></h2>
 
       {
         !partners.length ? <NotFound message="There are no partners" /> :
