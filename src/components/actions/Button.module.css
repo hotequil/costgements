@@ -6,7 +6,7 @@
     color: var(--black);
     font-size: 1.15rem;
     border-radius: var(--space);
-    padding: calc(var(--space) * 3) var(--fourth-space);
+    padding: calc(var(--space) * 3) calc(var(--space) * 5);
     width: fit-content;
     cursor: pointer;
     text-align: center;
