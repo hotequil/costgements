@@ -1,0 +1,32 @@
+legend, fieldset, form{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    min-inline-size: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form .form__legend{
+    --border-legend-size: 4px;
+
+    margin-bottom: var(--fourth-space);
+    padding-bottom: var(--border-legend-size);
+    border-bottom: var(--border-legend-size) solid var(--yellow);
+    font-size: 1.25rem;
+    font-weight: 600;
+    width: fit-content;
+}
+
+.form .form__fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: var(--double-space);
+    width: 100%;
+}

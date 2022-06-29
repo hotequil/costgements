@@ -1,3 +1,5 @@
+@import "./shared/forms/form.css";
+
 :root{
   --space: .3125rem;
   --double-space: calc(var(--space) * 2);

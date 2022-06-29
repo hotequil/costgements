@@ -5,6 +5,7 @@ import DevelopedBy from "./components/DevelopedBy";
 import PartnerList from "./components/lists/PartnerList";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Projects from "./pages/projects/Projects";
+import { NewProject } from "./pages/projects/NewProject";
 
 function App() {
   const partners = [
@@ -43,6 +44,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HelloGuys />} />
             <Route path="/projects" exact element={<Projects />} />
+            <Route path="/projects/new" exact element={<NewProject />} />
             <Route path="/partners" exact element={<PartnerList partners={partners} />} />
           </Routes>
         </main>
