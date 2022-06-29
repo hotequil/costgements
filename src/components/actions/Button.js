@@ -12,7 +12,7 @@ export const buttonTypes = {
   SUBMIT: "submit",
 }
 
-export function Button({ children, click, to, layoutType = layoutTypes.BUTTON, buttonType = buttonTypes.BUTTON }){
+export function Button({ children, click, to, layoutType, buttonType }){
   if(layoutType !== layoutTypes.BUTTON && layoutType !== layoutTypes.LINK) layoutType = layoutTypes.BUTTON
 
   const isLayoutTypeButton = layoutType === layoutTypes.BUTTON
@@ -27,4 +27,9 @@ export function Button({ children, click, to, layoutType = layoutTypes.BUTTON, b
       { isLayoutTypeLink && <Link className={styles.button} to={to}>{children}</Link> }
     </>
   )
+}
+
+Button.defaultProps = {
+  layoutType: layoutTypes.BUTTON,
+  buttonType: buttonTypes.BUTTON,
 }
