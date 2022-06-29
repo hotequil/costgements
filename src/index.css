@@ -6,6 +6,7 @@
   --fourth-space: calc(var(--double-space) * 2);
   --eight-space: calc(var(--space) * 8);
   --yellow: #f1f10d;
+  --red: #e80303;
   --yellow-rgb: 241, 241, 13;
   --yellow-opacity-44: rgba(var(--yellow-rgb), .44);
   --yellow-opacity-12: rgba(var(--yellow-rgb), .12);
@@ -13,6 +14,8 @@
   --black-opacity-24: rgba(26, 26, 26, 0.24);
   --white: #fefefe;
   --grey: #bebebe;
+  --lighter-grey: #eaeaea;
+  --light-grey: #dadada;
   --dark-grey: #727272;
   --border: 1px solid;
   --border-grey: var(--border) var(--grey);
