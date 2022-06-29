@@ -13,6 +13,12 @@ legend, fieldset, form{
     margin: 0 auto;
 }
 
+.form .form__actions{
+    display: flex;
+    gap: var(--double-space);
+    justify-content: flex-end;
+}
+
 .form .form__legend{
     --border-legend-size: 4px;
 
@@ -29,4 +35,15 @@ legend, fieldset, form{
     flex-direction: column;
     gap: var(--double-space);
     width: 100%;
+}
+
+@media(max-width: 800px){
+    .form .form__actions{
+        flex-direction: column;
+        justify-content: initial;
+    }
+
+    .form .form__actions > *{
+        width: 100%;
+    }
 }

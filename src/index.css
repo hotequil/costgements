@@ -18,6 +18,7 @@
   --light-grey: #dadada;
   --dark-grey: #727272;
   --border: 1px solid;
+  --big-border: 2px solid;
   --border-grey: var(--border) var(--grey);
   --max-width-page: 1200px;
   --ms-transition: 200ms;
