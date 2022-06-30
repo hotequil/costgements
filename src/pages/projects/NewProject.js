@@ -5,6 +5,7 @@ import { Button, buttonTypes, layoutTypes } from "../../components/actions/Butto
 
 export const NewProject = () => {
   const [, setName] = useState(null);
+  const [, setBudget] = useState(0);
   const submit = event => event.preventDefault()
 
   return (
@@ -12,6 +13,7 @@ export const NewProject = () => {
       <fieldset className="form__fieldset">
         <legend className="form__legend">New project</legend>
         <Input name="name" set={setName} label="Name" placeholder="Set name" required={true} />
+        <Input name="budget" type="number" inputMode="decimal" set={setBudget} label="Budget" placeholder="Set budget" required={true} />
         <div className="form__actions">
           <Button isOutline={true} layoutType={layoutTypes.LINK} to="/projects">Back</Button>
           <Button layoutType={layoutTypes.BUTTON} buttonType={buttonTypes.SUBMIT}>Create</Button>
