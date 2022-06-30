@@ -13,10 +13,19 @@
     margin: 0;
     transition: background-color var(--ms-transition), color var(--ms-transition);
     display: block;
-    height: fit-content;
 }
 
 .button:hover, .button:focus{
     background-color: var(--black);
     color: var(--white);
+}
+
+.button.buttonOutline{
+    border: var(--big-border) var(--yellow);
+    background-color: transparent;
+}
+
+.button.buttonOutline:hover, .button.buttonOutline:focus{
+    background-color: var(--yellow);
+    color: var(--black);
 }
