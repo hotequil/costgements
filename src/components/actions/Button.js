@@ -13,7 +13,7 @@ export const buttonTypes = {
   SUBMIT: "submit",
 }
 
-export function Button({ click, to, isOutline, layoutType, buttonType, children }){
+export function Button({ click, to, isOutline, layoutType, buttonType, children, ...props }){
   if(layoutType !== layoutTypes.BUTTON && layoutType !== layoutTypes.LINK) layoutType = layoutTypes.BUTTON
 
   const isLayoutTypeButton = layoutType === layoutTypes.BUTTON
@@ -26,8 +26,8 @@ export function Button({ click, to, isOutline, layoutType, buttonType, children 
 
   return (
     <>
-      { isLayoutTypeButton && <button className={classes} type={buttonType} onClick={click}>{children}</button> }
-      { isLayoutTypeLink && <Link className={classes} to={to}>{children}</Link> }
+      { isLayoutTypeButton && <button {...props} className={classes} type={buttonType} onClick={click}>{children}</button> }
+      { isLayoutTypeLink && <Link {...props} className={classes} to={to}>{children}</Link> }
     </>
   )
 }

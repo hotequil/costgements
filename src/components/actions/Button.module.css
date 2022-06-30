@@ -29,3 +29,10 @@
     background-color: var(--yellow);
     color: var(--black);
 }
+
+.button:disabled, .button:hover:disabled, .button:focus:disabled, .button.buttonOutline:disabled, .button.buttonOutline:hover:disabled, .button.buttonOutline:focus:disabled{
+    background-color: var(--dark-grey);
+    border-color: var(--dark-grey);
+    color: var(--white);
+    cursor: not-allowed;
+}
