@@ -8,7 +8,7 @@ export const NewProject = () => {
   const [name, setName] = useState(null);
   const [budget, setBudget] = useState(0);
   const [category, setCategory] = useState(null);
-  const categories = ["Ecommerce", "Crowdfunding", "CRM", "ERP"]
+  const [categories] = useState(["Ecommerce", "Crowdfunding", "CRM", "ERP"])
   const submit = event => event.preventDefault()
 
   return (
