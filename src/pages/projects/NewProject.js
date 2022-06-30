@@ -1,15 +1,22 @@
 import styles from "./NewProject.module.css"
 import { Input } from "../../components/forms/Input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, buttonTypes, layoutTypes } from "../../components/actions/Button";
 import { Select } from "../../components/forms/Select";
+import { Categories } from "../../services/categories";
+
+const categoriesService = new Categories();
 
 export const NewProject = () => {
   const [name, setName] = useState(null);
   const [budget, setBudget] = useState(0);
   const [category, setCategory] = useState(null);
-  const [categories] = useState(["Ecommerce", "Crowdfunding", "CRM", "ERP"])
+  const [categories, setCategories] = useState([])
   const submit = event => event.preventDefault()
+
+  useEffect(() => {
+    categoriesService.get().then(setCategories)
+  }, [])
 
   return (
     <form className={`form ${styles.form}`} onSubmit={submit}>
