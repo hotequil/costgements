@@ -1,1 +1,1 @@
-export const requestConfig = (method = "GET") => ({ method, headers: { "Content-type": "application/json" } })
+export const requestConfig = (method = "GET", params = {}) => ({ method, headers: { "Content-type": "application/json" }, ...params })
