@@ -1,9 +1,9 @@
 import { env } from "../env";
-import { requestConfig } from "../helpers/requests";
+import { ok, requestConfig } from "../helpers/requests";
 
 export class Projects{
   create(project){
-    return fetch(`${env.API}/projects`, requestConfig("POST", { body: JSON.stringify(this.#generateModel(project)) }))
+    return ok(fetch(`${env.API}/projects`, requestConfig("POST", { body: JSON.stringify(this.#generateModel(project)) })))
   }
 
   #generateModel(project){
