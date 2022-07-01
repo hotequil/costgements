@@ -11,6 +11,7 @@ legend, fieldset, form{
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
+    row-gap: var(--fourth-space);
 }
 
 .form .form__actions{
