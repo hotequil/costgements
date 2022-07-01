@@ -26,4 +26,4 @@ yarn-error.log*
 .idea
 
 # fake DB
-db.json
+/db.json
