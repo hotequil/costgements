@@ -1,0 +1,20 @@
+.toast{
+    border-radius: var(--space);
+    padding: var(--double-space);
+    width: 100%;
+    text-align: left;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.toast.success{
+    background-color: var(--green-bg-toast);
+    border: var(--border) var(--green);
+}
+
+.toast.error{
+    background-color: var(--red-bg-toast);
+    border: var(--border) var(--red);
+}
