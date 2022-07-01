@@ -41,6 +41,7 @@ export const Toast = ({ message, type, set }) => {
 Toast.propTypes = {
   message: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
+  set: PropTypes.func.isRequired,
 }
 
 Toast.defaultTypes = defaultObject
