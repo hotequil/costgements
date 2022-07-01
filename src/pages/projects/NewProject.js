@@ -6,6 +6,7 @@ import { Select } from "../../components/forms/Select";
 import { Categories } from "../../services/categories";
 import { useNavigate } from "react-router-dom";
 import { Projects } from "../../services/projects";
+import { generateToast, Toast, toastType } from "../../components/global/toast/Toast";
 
 const categoriesService = new Categories();
 const projectsService = new Projects()
@@ -17,6 +18,7 @@ export const NewProject = () => {
   const [categories, setCategories] = useState([])
   const [loading, setLoading] = useState(false)
   const navigate = useNavigate()
+  const [toast, setToast] = useState(generateToast())
 
   const submit = async event => {
     event.preventDefault()
@@ -26,10 +28,18 @@ export const NewProject = () => {
     try{
       await projectsService.create({ name, budget, category })
 
-      navigate('/projects')
+      setToast(generateToast(
+        "Project created with success",
+        toastType.SUCCESS,
+        () => {
+          navigate('/projects')
+          setLoading(false)
+        }
+      ))
     } catch(error){
       console.error(error)
-    } finally{
+
+      setToast(generateToast("An error has occurred", toastType.ERROR))
       setLoading(false)
     }
   }
@@ -40,6 +50,7 @@ export const NewProject = () => {
 
   return (
     <form className={`form ${styles.form}`} onSubmit={submit}>
+      <Toast {...toast} set={setToast} />
       <fieldset className="form__fieldset">
         <legend className="form__legend">New project</legend>
         <Input name="name" set={setName} label="Name" placeholder="Set name" required={true} />
