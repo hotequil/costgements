@@ -25,6 +25,7 @@
   --border-grey: var(--border) var(--grey);
   --max-width-page: 1200px;
   --ms-transition: 200ms;
+  --ms-transition-loader: 1000ms;
 }
 
 html, body, noscript, #root{
