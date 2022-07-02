@@ -8,6 +8,15 @@ export class Projects{
     return ok(fetch(this.#url, requestConfig("POST", { body: JSON.stringify(this.#generateModel(project)) })))
   }
 
+  update(project){
+    const { id, ...projectWithoutId } = project
+
+    return ok(fetch(
+      `${this.#url}/${id}`,
+      requestConfig("PATCH", { body: JSON.stringify(this.#generateModel(projectWithoutId)) })
+    ))
+  }
+
   get(){
     return ok(fetch(this.#url, requestConfig()))
   }
@@ -24,7 +33,7 @@ export class Projects{
     if(!project) project = {}
 
     return {
-      name: project.name || null,
+      name: project.name || "",
       budget: +project.budget || 0,
       category: project.category || null,
       services: project.services || []
