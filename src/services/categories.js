@@ -2,6 +2,6 @@ export class Categories{
   #categories = ["Ecommerce", "Crowdfunding", "CRM", "ERP"]
 
   get(){
-    return new Promise(resolve => setTimeout(() => resolve(this.#categories), 2000))
+    return new Promise(resolve => resolve(this.#categories))
   }
 }
