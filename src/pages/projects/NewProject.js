@@ -7,6 +7,7 @@ import { Categories } from "../../services/categories";
 import { useNavigate } from "react-router-dom";
 import { Projects } from "../../services/projects";
 import { generateToast, Toast, toastType } from "../../components/global/toast/Toast";
+import { Loader, loaderColors } from "../../components/global/loader/Loader";
 
 const categoriesService = new Categories();
 const projectsService = new Projects()
@@ -58,7 +59,11 @@ export const NewProject = () => {
         <Select label="Category" set={setCategory} value={category} name="category" required={true} options={categories} />
         <div className="form__actions">
           <Button isOutline={true} layoutType={layoutTypes.LINK} to="/projects">Back</Button>
-          <Button layoutType={layoutTypes.BUTTON} buttonType={buttonTypes.SUBMIT} disabled={loading || !category || !name || budget <= 0}>Create</Button>
+          <Button layoutType={layoutTypes.BUTTON}
+                  buttonType={buttonTypes.SUBMIT}
+                  disabled={loading || !category || !name || budget <= 0}>
+            { (loading && <Loader show={loading} color={loaderColors.WHITE} />) || "Create" }
+          </Button>
         </div>
       </fieldset>
     </form>
