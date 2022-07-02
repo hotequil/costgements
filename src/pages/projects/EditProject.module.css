@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    row-gap: var(--fourth-space);
+    margin: var(--eight-space) auto 0 auto;
+}
+
+.services{
+    width: 100%;
+    padding-top: var(--fourth-space);
+    border-top: var(--border-grey);
+}
