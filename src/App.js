@@ -43,9 +43,9 @@ function App() {
         <main className="app__main">
           <Routes>
             <Route path="/" exact element={<HelloGuys />} />
-            <Route path="/projects" exact element={<Projects />} />
-            <Route path="/projects/new" exact element={<NewProject />} />
-            <Route path="/partners" exact element={<PartnerList partners={partners} />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/new" element={<NewProject />} />
+            <Route path="/partners" element={<PartnerList partners={partners} />} />
           </Routes>
         </main>
         <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
