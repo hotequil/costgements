@@ -12,7 +12,9 @@
     text-align: center;
     margin: 0;
     transition: background-color var(--ms-transition), color var(--ms-transition);
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button:hover, .button:focus{
