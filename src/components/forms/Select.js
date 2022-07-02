@@ -5,13 +5,13 @@ import { useState } from "react";
 
 export const Select = ({ label, name, options, value, set, required }) => {
   const [id] = useState(uniqueId())
-  
+
   return (
     <div className={styles.container}>
       <label className={`${styles.label} ${required ? styles.labelRequired : ''}`} htmlFor={id}>{label}</label>
       <select name={name} className={styles.control} id={id} required={required} onChange={event => set(event.target.value)}>
-        <option value={null} defaultValue={!value} disabled={!!value && required}>None</option>
-        { options.map((option, index) => <option key={index} value={option}>{option}</option>) }
+        <option value={null} selected={!value} disabled={!!value && required}>None</option>
+        { options.map((option, index) => <option key={index} value={option} selected={option === value}>{option}</option>) }
       </select>
     </div>
   )
