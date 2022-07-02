@@ -2,13 +2,36 @@ import PropTypes from "prop-types";
 import styles from "./ProjectCard.module.css"
 import { Button, buttonTypes, layoutTypes } from "../../components/actions/Button";
 import { money } from "../../helpers/format";
+import { Projects } from "../../services/projects";
+import { useState } from "react";
+import { Loader } from "../../components/global/loader/Loader";
 
-export const ProjectCard = ({ id, name, budget, category, services }) => {
+const projectsService = new Projects()
+
+export const ProjectCard = ({ id, name, budget, category, services, onDelete }) => {
+  const [deleteLoading, setDeleteLoading] = useState(false)
+
   const infos = [
     `Budget: ${money(budget)}`,
     `Category: ${category}`,
     `Services quantity: ${services.length}`,
   ]
+
+  const deleteProject = async () => {
+    setDeleteLoading(true)
+
+    try{
+      await projectsService.delete(id)
+
+      onDelete(id, true)
+    } catch(error){
+      console.error(error)
+
+      onDelete(id, false)
+    } finally {
+      setDeleteLoading(false)
+    }
+  }
 
   return (
     <article className={styles.card}>
@@ -21,8 +44,8 @@ export const ProjectCard = ({ id, name, budget, category, services }) => {
         <Button layoutType={layoutTypes.BUTTON}
                 buttonType={buttonTypes.BUTTON}
                 isOutline
-                click={alert.bind(null, "TODO DELETE")}>
-          Delete
+                click={deleteProject}>
+          { (deleteLoading && <Loader show={deleteLoading} />) || "Delete" }
         </Button>
       </div>
     </article>
@@ -35,4 +58,5 @@ ProjectCard.propTypes = {
   budget: PropTypes.number.isRequired,
   category: PropTypes.string.isRequired,
   services: PropTypes.array.isRequired,
+  onDelete: PropTypes.func.isRequired,
 }

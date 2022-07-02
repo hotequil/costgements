@@ -28,6 +28,17 @@ function Projects(){
     }
   }
 
+  const onDelete = (currentProjectId, succeed) => {
+    const currentProject = projects.find(({ id }) => id === currentProjectId)
+
+    setToast(generateToast(
+      `${currentProject.name} ${succeed ? "was" : "wasn't"} deleted`,
+      succeed ? toastType.SUCCESS : toastType.ERROR
+    ))
+
+    if(succeed) setProjects(projects.filter(({ id }) => id !== currentProjectId))
+  }
+
   useEffect(() => {
     get()
   }, [])
@@ -47,7 +58,14 @@ function Projects(){
         <ul className={styles.grid}>
           {
             projects.map(project =>
-              <li key={project.id}><ProjectCard id={project.id} name={project.name} budget={project.budget} category={project.category} services={project.services} /></li>
+              <li key={project.id}>
+                <ProjectCard id={project.id}
+                             name={project.name}
+                             budget={project.budget}
+                             category={project.category}
+                             services={project.services}
+                             onDelete={onDelete} />
+              </li>
             )
           }
         </ul>
