@@ -2,8 +2,14 @@ import { env } from "../env";
 import { ok, requestConfig } from "../helpers/requests";
 
 export class Projects{
+  #url = `${env.API}/projects`
+
   create(project){
-    return ok(fetch(`${env.API}/projects`, requestConfig("POST", { body: JSON.stringify(this.#generateModel(project)) })))
+    return ok(fetch(this.#url, requestConfig("POST", { body: JSON.stringify(this.#generateModel(project)) })))
+  }
+
+  get(){
+    return ok(fetch(this.#url))
   }
 
   #generateModel(project){
