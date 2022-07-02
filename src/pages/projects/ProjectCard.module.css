@@ -1,0 +1,39 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: var(--double-space);
+    border-radius: var(--space);
+    border: var(--border-grey);
+    background-color: transparent;
+    row-gap: var(--space);
+}
+
+.actions{
+    display: flex;
+    column-gap: var(--space);
+    width: 100%;
+}
+
+.actions > *{
+    flex-grow: 1;
+    width: 100%;
+    max-height: 32px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.title, .text{
+    word-break: break-word;
+    margin: 0;
+}
+
+.title{
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.text{
+    font-size: 1rem;
+    color: var(--dark-grey);
+}
