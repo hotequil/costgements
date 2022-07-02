@@ -1,0 +1,27 @@
+@keyframes rotation{
+    from {
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.loader{
+    animation: rotation infinite linear var(--ms-transition-loader);
+    font-size: 1rem;
+    margin: 0 auto;
+}
+
+.loader.yellow path{
+    color: var(--yellow);
+}
+
+.loader.black path{
+    color: var(--black);
+}
+
+.loader.white path{
+    color: var(--white);
+}
