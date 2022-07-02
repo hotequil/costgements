@@ -12,6 +12,10 @@ export class Projects{
     return ok(fetch(this.#url, requestConfig()))
   }
 
+  single(id){
+    return ok(fetch(`${this.#url}/${id}`, requestConfig()))
+  }
+
   delete(id){
     return ok(fetch(`${this.#url}/${id}`, requestConfig("DELETE")))
   }
