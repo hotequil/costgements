@@ -6,6 +6,7 @@ import PartnerList from "./components/lists/PartnerList";
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Projects from "./pages/projects/Projects";
 import { NewProject } from "./pages/projects/NewProject";
+import { EditProject } from "./pages/projects/EditProject";
 
 function App() {
   const partners = [
@@ -45,6 +46,7 @@ function App() {
             <Route path="/" exact element={<HelloGuys />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/new" element={<NewProject />} />
+            <Route path="/projects/:id" element={<EditProject />} />
             <Route path="/partners" element={<PartnerList partners={partners} />} />
           </Routes>
         </main>

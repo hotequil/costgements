@@ -9,7 +9,7 @@ export class Projects{
   }
 
   get(){
-    return ok(fetch(this.#url))
+    return ok(fetch(this.#url, requestConfig()))
   }
 
   delete(id){
