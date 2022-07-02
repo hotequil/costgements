@@ -12,6 +12,10 @@ export class Projects{
     return ok(fetch(this.#url))
   }
 
+  delete(id){
+    return ok(fetch(`${this.#url}/${id}`, requestConfig("DELETE")))
+  }
+
   #generateModel(project){
     if(!project) project = {}
 
