@@ -3,7 +3,7 @@ import styles from "./Control.module.css"
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export const Input = ({ label, name, placeholder, set, type, inputMode, required }) => {
+export const Input = ({ label, name, placeholder, set, type, inputMode, required, ...props }) => {
   const [id] = useState(uniqueId())
   
   return (
@@ -16,7 +16,8 @@ export const Input = ({ label, name, placeholder, set, type, inputMode, required
              inputMode={inputMode}
              name={name}
              onInput={event => set(event.target.value) }
-             required={required} />
+             required={required}
+             {...props} />
     </div>
   )
 }
@@ -26,10 +27,12 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
   set: PropTypes.func.isRequired,
+  props: PropTypes.array,
 }
 
 Input.defaultProps = {
   type: "text",
   inputMode: "text",
   required: false,
+  props: [],
 }
