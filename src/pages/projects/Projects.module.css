@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
     max-width: var(--max-width-page);
-    row-gap: var(--double-space);
+    row-gap: var(--fourth-space);
 }
 
 .head{
