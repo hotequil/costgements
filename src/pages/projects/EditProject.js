@@ -9,6 +9,7 @@ import { Button, buttonTypes, layoutTypes } from "../../components/actions/Butto
 import { Input } from "../../components/forms/Input";
 import { Select } from "../../components/forms/Select";
 import { Categories } from "../../services/categories";
+import { ServicesList } from "./services/ServicesList";
 
 const projectService = new Projects()
 const categoriesService = new Categories()
@@ -83,7 +84,7 @@ export const EditProject = () => {
 
       {
         showContent &&
-        <form className="form" onSubmit={submit}>
+        <form className="form" onSubmit={submit} name="formProject">
           <fieldset className="form__fieldset">
             <legend className="form__legend">Edit {project.name} project</legend>
 
@@ -122,7 +123,10 @@ export const EditProject = () => {
         </form>
       }
 
-      { showContent && <div className={styles.services}>TODO SERVICES CRUD</div> }
+      {
+        showContent &&
+        <div className={styles.services}><ServicesList project={project} setProject={setProjectToEdit} /></div>
+      }
     </div>
   )
 }
