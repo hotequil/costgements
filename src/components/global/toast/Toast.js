@@ -1,6 +1,7 @@
 import styles from "./Toast.module.css"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { FINISHED_TIMEOUT_NUMBER } from "../../../helpers/manipulate";
 
 export const toastType = {
   SUCCESS: "success",
@@ -25,15 +26,20 @@ export const generateToast = (message = defaultObject.message, type = defaultObj
 }
 
 export const Toast = ({ message, type, set }) => {
+  const [timeoutId, setTimeoutId] = useState(FINISHED_TIMEOUT_NUMBER)
+
   useEffect(() => {
-    if(!message) return
+    if(!message || timeoutId !== FINISHED_TIMEOUT_NUMBER) return
 
-    const timeoutId = setTimeout(() => {
-      set(generateToast())
+    setTimeoutId(
+      setTimeout(() => {
+        set(generateToast())
 
-      clearTimeout(timeoutId)
-    }, TIME_AFTER_SHOW)
-  }, [message, set])
+        clearTimeout(timeoutId)
+        setTimeoutId(FINISHED_TIMEOUT_NUMBER)
+      }, TIME_AFTER_SHOW)
+    )
+  }, [message, set, timeoutId])
 
   return (<>{!!message && <p role="alert" className={`${styles.toast} ${styles[type]}`}>{message}</p>}</>)
 }
