@@ -3,3 +3,38 @@
     flex-direction: column;
     row-gap: var(--fourth-space);
 }
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: var(--double-space);
+}
+
+.list.listNotFound{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    text-decoration: underline;
+}
+
+@media(max-width: 760px){
+    .list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 600px){
+    .list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 440px){
+    .list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
