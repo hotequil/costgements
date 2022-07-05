@@ -43,7 +43,7 @@ function App() {
         </header>
         <main className="app__main">
           <Routes>
-            <Route path="/" exact element={<HelloGuys />} />
+            <Route path="/" element={<HelloGuys />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/new" element={<NewProject />} />
             <Route path="/projects/:id" element={<EditProject />} />
