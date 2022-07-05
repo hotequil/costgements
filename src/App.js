@@ -3,7 +3,7 @@ import './App.css';
 import HelloGuys from "./components/HelloGuys";
 import DevelopedBy from "./components/DevelopedBy";
 import PartnerList from "./components/lists/PartnerList";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes, Navigate } from "react-router-dom";
 import Projects from "./pages/projects/Projects";
 import { NewProject } from "./pages/projects/NewProject";
 import { EditProject } from "./pages/projects/EditProject";
@@ -48,6 +48,7 @@ function App() {
             <Route path="/projects/new" element={<NewProject />} />
             <Route path="/projects/:id" element={<EditProject />} />
             <Route path="/partners" element={<PartnerList partners={partners} />} />
+            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </main>
         <footer className="app__footer text-align-center"><DevelopedBy name="hotequil" /></footer>
